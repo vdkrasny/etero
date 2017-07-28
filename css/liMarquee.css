@@ -1,0 +1,40 @@
+/*Plugin CSS*/
+.str_wrap {
+  white-space: nowrap;
+  position: absolute;
+  width: 100%;
+  overflow: hidden;
+  cursor: move;
+}
+.str_move,
+.str_move_clone {
+  position: absolute;
+  top: 0;
+  left: 0;
+}
+.str_move_clone {
+  top: 0 !important;
+  left: 100%;
+}
+
+.str_vertical .str_move_clone {
+  left: 0;
+  top: 100%;
+}
+
+.str_down .str_move_clone {
+  left: 0;
+  bottom: 100%;
+}
+
+.str_vertical .str_move,
+.str_down .str_move {
+  white-space: normal;
+  width: 100%;
+}
+
+.str_wrap.str_static,
+.str_wrap.no_drag,
+.str_wrap.noStop {
+  cursor: inherit;
+}
